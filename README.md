@@ -9,3 +9,6 @@ A website to add proofreader's marks to literature, whether it's a student's ess
 ## Feature
 - [ ] Manually add marks. Can use keyboard shortcuts and the mouse.
 - [ ] AI adds the marks for you.
+
+## Dependencies
+- [Tailwind CSS](https://tailwindcss.com/)
