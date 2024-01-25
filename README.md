@@ -12,3 +12,4 @@ A website to add proofreader's marks to literature, whether it's a student's ess
 
 ## Dependencies
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Rough Notation](https://github.com/rough-stuff/rough-notation)
