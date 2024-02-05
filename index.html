@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proofreader</title>
+
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://unpkg.com/@popperjs/core@2"></script> <!-- Tippy.js -->
+    <script src="https://unpkg.com/tippy.js@6"></script> <!-- Tippy.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> <!-- Toastify.js -->
+</head>
+
+<body class="flex flex-col items-center gap-5 m-3 bg-gray-100 h-dvh w-dvw dark:bg-gray-900">
+    <button id="select-text"
+        class="flex flex-row items-center justify-center p-2 px-3 rounded-md light-button h-fit bg-primary-light dark:bg-primary-dark hover:bg-primary-light/70 dark:hover:bg-primary-dark/70"
+        type="button">Select text
+    </button>
+    <textarea id="text-area" class="w-full h-full max-w-4xl max-h-4xl"></textarea>
+
+</body>
+
+<script src="app.js"></script>
+<script src="js/listener.js"></script>
+
+</html>
