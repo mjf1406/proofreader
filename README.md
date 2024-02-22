@@ -10,6 +10,9 @@ A website to add proofreader's marks to literature, whether it's a student's ess
 
 ### Completed
 
+-   2024/2/22
+    -   switched to editable div
+    -   added toolbar at the top, but the buttons do not function
 -   2024/2/5
     -   added a button to get the selected text
     -   added a textarea to the page

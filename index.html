@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7e282d14cd.js" crossorigin="anonymous"></script>
+
     <title>Proofreader</title>
 
     <link rel="stylesheet" href="tailwind.css">
@@ -14,15 +16,67 @@
 </head>
 
 <body class="flex flex-col items-center gap-5 m-3 bg-gray-100 h-dvh w-dvw dark:bg-gray-900">
-    <button id="select-text"
-        class="flex flex-row items-center justify-center p-2 px-3 rounded-md light-button h-fit bg-primary-light dark:bg-primary-dark hover:bg-primary-light/70 dark:hover:bg-primary-dark/70"
-        type="button">Select text
-    </button>
-    <textarea id="text-area" class="w-full h-full max-w-4xl max-h-4xl"></textarea>
-
+    <div class="flex flex-row gap-3">
+        <button id="select-text-paragraph"
+            class="flex flex-row items-center justify-center p-2 px-3 rounded-md light-button h-fit bg-primary-light dark:bg-primary-dark hover:bg-primary-light/70 dark:hover:bg-primary-dark/70"
+            type="button">Select text
+        </button>
+    </div>
+    <div class="flex flex-row divide-x-2 [&>*:first-child]:rounded-l-full [&>*:last-child]:rounded-r-full">
+        <button id="bold" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+            <i class="fa-solid fa-bold"></i></button>
+        <button id="italic" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+            <i class="fa-solid fa-italic"></i></button>
+        <button id="underline" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+            <i class="fa-solid fa-underline"></i></button>
+        <button id="strikethrough" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+            <i class="fa-solid fa-strikethrough"></i></button>
+        <button id="circle" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+            <i class="fa-regular fa-circle"></i></button>
+        <button id="square" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+            <i class="fa-regular fa-square"></i></button>
+        <button id="double-underline" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+            DoubleU</button>
+        <button id="dashed-underline" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+            DashU</button>
+        <button id="dotted-underline" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+            DotU</button>
+    </div>
+    <div class="flex flex-row w-full gap-5 transition-all duration-500 ease-in-out">
+        <div class="hidden rotate-90 w-[20px] self-center text-center max-w-[20px] transition-all duration-500">
+            <span id="expand-collapse" class="cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="20"
+                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M246.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 109.3 361.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160zm160 352l-160-160c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 301.3 361.4 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3z" />
+                </svg>
+            </span>
+        </div>
+        <textarea id="user-input"
+            class="hidden w-full h-full px-4 py-2 mx-auto transition-opacity duration-500 min-w-1/2 max-h-4xl md:max-w-md lg:max-w-lg xl:max-w-xl"></textarea>
+        <div id="markup" class="w-full mx-auto grow-0 max-w-[484px] bg-slate-800 p-3" contenteditable="true">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. In nulla
+            posuere sollicitudin aliquam ultrices sagittis orci. Nam libero justo laoreet sit amet cursus sit. Augue
+            neque gravida in fermentum et. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Et pharetra
+            pharetra massa massa. Pulvinar elementum integer enim neque volutpat ac tincidunt. Natoque penatibus et
+            magnis dis parturient montes nascetur ridiculus. Gravida arcu ac tortor dignissim convallis aenean et
+            tortor. Vitae purus faucibus ornare suspendisse sed nisi lacus. Ultricies lacus sed turpis tincidunt. Eget
+            est lorem ipsum dolor sit amet consectetur. Metus vulputate eu scelerisque felis imperdiet proin. Neque
+            aliquam vestibulum morbi blandit cursus risus at ultrices.
+        </div>
+    </div>
 </body>
 
+<script src="js/modules/helpers.js"></script>
+<script src="js/tippies.js"></script>
+
 <script src="app.js"></script>
-<script src="js/listener.js"></script>
+<script src="js/listeners.js"></script>
+<script src="js/updateUI.js"></script>
+
+<script>
+    if (!localStorage.getItem("input-state")) localStorage.setItem("input-state", 'expanded')
+</script>
 
 </html>
