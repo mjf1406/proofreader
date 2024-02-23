@@ -33,7 +33,7 @@ function attachPopUpToolbarToSelection(selectionData) {
         tempDiv.style.opacity = "0"; // Make invisible
 
         tippy(tempDiv, {
-            intractable: true,
+            interactive: true,
             content: "Toggle text input area",
             allowHTML: true,
             onHide: () => {

@@ -44,12 +44,3 @@ function clearSelection(selection) {
     }
     return false;
 }
-
-function highlightSelection(selection, color) {
-    if (!selection) return;
-    var range = selection.getRangeAt(0);
-    var new_span = document.createElement("span");
-    new_span.style.backgroundColor = color;
-    new_span.style.padding = "0 3px";
-    range.surroundContents(new_span);
-}

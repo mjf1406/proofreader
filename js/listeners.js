@@ -37,3 +37,59 @@ document.addEventListener("selectionchange", async function () {
 
     attachPopUpToolbarToSelection(selectionData);
 });
+
+const highlightButton = document.getElementById("highlight");
+highlightButton.addEventListener("click", function () {
+    const textArea = document.getElementById("markup");
+    const selectionData = getSelectedTextData(textArea);
+    highlight(selectionData, "yellow");
+});
+
+const underlineButton = document.getElementById("underline");
+underlineButton.addEventListener("click", function () {
+    const textArea = document.getElementById("markup");
+    const selectionData = getSelectedTextData(textArea);
+    underline(selectionData);
+});
+
+const strikeThroughButton = document.getElementById("strikethrough");
+strikeThroughButton.addEventListener("click", function () {
+    const textArea = document.getElementById("markup");
+    const selectionData = getSelectedTextData(textArea);
+    strikeThrough(selectionData);
+});
+
+const doubleUnderlineButton = document.getElementById("double-underline");
+doubleUnderlineButton.addEventListener("click", function () {
+    const textArea = document.getElementById("markup");
+    const selectionData = getSelectedTextData(textArea);
+    doubleUnderline(selectionData);
+});
+
+const dashedUnderlineButton = document.getElementById("dashed-underline");
+dashedUnderlineButton.addEventListener("click", function () {
+    const textArea = document.getElementById("markup");
+    const selectionData = getSelectedTextData(textArea);
+    dashedUnderline(selectionData);
+});
+
+const dottedUnderlineButton = document.getElementById("dotted-underline");
+dottedUnderlineButton.addEventListener("click", function () {
+    const textArea = document.getElementById("markup");
+    const selectionData = getSelectedTextData(textArea);
+    dottedUnderline(selectionData);
+});
+
+const boxButton = document.getElementById("box");
+boxButton.addEventListener("click", function () {
+    const textArea = document.getElementById("markup");
+    const selectionData = getSelectedTextData(textArea);
+    box(selectionData);
+});
+
+const circleButton = document.getElementById("circle");
+circleButton.addEventListener("click", function () {
+    const textArea = document.getElementById("markup");
+    const selectionData = getSelectedTextData(textArea);
+    circle(selectionData);
+});

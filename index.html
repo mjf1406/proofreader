@@ -33,7 +33,7 @@
             <i class="fa-solid fa-strikethrough"></i></button>
         <button id="circle" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
             <i class="fa-regular fa-circle"></i></button>
-        <button id="square" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+        <button id="box" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
             <i class="fa-regular fa-square"></i></button>
         <button id="double-underline" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
             DoubleU</button>
@@ -41,6 +41,8 @@
             DashU</button>
         <button id="dotted-underline" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
             DotU</button>
+        <button id="highlight" class="px-3 py-1 bg-slate-800 border-slate-700 hover:bg-slate-700">
+            Highlight</button>
     </div>
     <div class="flex flex-row w-full gap-5 transition-all duration-500 ease-in-out">
         <div class="hidden rotate-90 w-[20px] self-center text-center max-w-[20px] transition-all duration-500">
@@ -55,17 +57,19 @@
         <textarea id="user-input"
             class="hidden w-full h-full px-4 py-2 mx-auto transition-opacity duration-500 min-w-1/2 max-h-4xl md:max-w-md lg:max-w-lg xl:max-w-xl"></textarea>
         <div id="markup" class="w-full mx-auto grow-0 max-w-[484px] bg-slate-800 p-3" contenteditable="true">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. In nulla
-            posuere sollicitudin aliquam ultrices sagittis orci. Nam libero justo laoreet sit amet cursus sit. Augue
-            neque gravida in fermentum et. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Et pharetra
-            pharetra massa massa. Pulvinar elementum integer enim neque volutpat ac tincidunt. Natoque penatibus et
-            magnis dis parturient montes nascetur ridiculus. Gravida arcu ac tortor dignissim convallis aenean et
-            tortor. Vitae purus faucibus ornare suspendisse sed nisi lacus. Ultricies lacus sed turpis tincidunt. Eget
-            est lorem ipsum dolor sit amet consectetur. Metus vulputate eu scelerisque felis imperdiet proin. Neque
-            aliquam vestibulum morbi blandit cursus risus at ultrices.
+            Brilliant scientists have come and gone, but perhaps none have accomplished anything under the circumstances
+            that Stephen Hawking has faced. When Hawking was 21, he was in his third year at Oxford when he was
+            diagnosed with a severe motor neuron disease that broke his nerve cells and atrophied his muscles. His
+            words became slurred. Other communication organs were also destroyed. Doctors only gave Hawking two more
+            years to live. Despite this bleak prognosis, Hawking not only completed his course at Oxford, but also went
+            on to complete his PhD thesis, marry, and have three children. He was elected a Fellow of the Royal Society
+            in 1974, a rare honor for any scientist.
         </div>
     </div>
+
+    <div class="hidden px-px"></div>
+    <div class="hidden px-1"></div>
+    <div class="hidden px-2"></div>
 </body>
 
 <script src="js/modules/helpers.js"></script>
@@ -74,6 +78,7 @@
 <script src="app.js"></script>
 <script src="js/listeners.js"></script>
 <script src="js/updateUI.js"></script>
+<script src="js/textStyles.js"></script>
 
 <script>
     if (!localStorage.getItem("input-state")) localStorage.setItem("input-state", 'expanded')
